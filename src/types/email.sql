@@ -1,10 +1,10 @@
-create domain dm_email as varchar(254)
+create domain dt_email as varchar(254)
 check (
     value ~ '^[a-z0-9.!#$%&''*+/=?^_`{|}~-]{1,64}@[a-z0-9-]+(\.[a-z0-9-]+)*\.[a-z]{2,}$'
     and length(value) <= 254
 );
 
-comment on domain dm_email is
+comment on domain dt_email is
 'This domain is used to store email addresses in a standard format.
 
 Constraints:
