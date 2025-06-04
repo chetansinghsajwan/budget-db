@@ -1,10 +1,10 @@
-create domain dm_phone as varchar(20)
+create domain dt_phone as varchar(20)
 check (
     value ~ '^\+[1-9][0-9]{0,2} [0-9]{4,14}$'
     and length(value) <= 17
 );
 
-comment on domain dm_phone is
+comment on domain dt_phone is
 'international phone number in e.164 format with a space after the country code.
 
 format:
